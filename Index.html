@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="keywords" content="portfolio, html">
 
-    <title>My portfolio</title>
+
+
+<!-- Font-Awesome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<!-- Google Font Link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<title>My portfolio</title>
 </head>
+
+<style>
+    body {background-color: rgb(228, 225, 220);font-family: "Roboto", sans-serif;}
+    
+</style>
+
+
 <body>
     <!-- Section: Navbar -->
-     <nav>
-        <ul>
-            <li><a href="#aboutme">About Me</a>
-            <li><a href="#skills">Skills and Expertise</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education and Experience</a></li>
-            <li><a href="#contactform">Contact Form</a></li>
-            <li><a href="#contactme">Contact Me</a></li>
-            </li>
-        </ul>
-        
-     </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#aboutme">About Me</a>
+                <li><a href="#skills">Skills and Expertise</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education and Experience</a></li>
+                <li><a href="#contactform">Contact Form</a></li>
+                <li><a href="#contactme">Contact Me</a></li>
+            
+                </li>
+            </ul>
+            
+         </nav>
+    </header>
 
 
 
-
-    <!-- Section: Introduction -->
-<header id="aboutme">
-   <h1>Pranjol Sarker Angon</h1>
-    <p><em>MERN Stack Developer</em></p>
-    <p>I'm a <strong>MERN Stack developer</strong> who is passionate about making error-free websites with 100% client satisfaction. I have a passion for learning and sharing my knowledge with others s publicly as possible. I love to solve real-world problems. I am strategic, goal-oriented and always work with an end goal in mind. I pride myself on doing quality work and maintain excellent communication. Most of the time i work with wordpress but some technologies i enjoy working with include <strong>ReactJS</strong>, <strong>JavaScript</strong> as well as PHP.</p> 
-    <a target="_blank" href="https://www.linkedin.com/in/angonsarker1/"><img src="./Images/Pranjol.jpg" alt="Pranjol Sarker Angon" height="200" /></a> <hr>
-    
-
-</header>
-
-    <!-- Section: Skills and Expertise -->
+<main>
+     <!-- Section: Introduction -->
+<section id="aboutme">
+    <h1>Pranjol Sarker Angon</h1>
+     <p><em>MERN Stack Developer</em></p>
+     <p>I'm a <strong>MERN Stack developer</strong> who is passionate about making error-free websites with 100% client satisfaction. I have a passion for learning and sharing my knowledge with others s publicly as possible. I love to solve real-world problems. I am strategic, goal-oriented and always work with an end goal in mind. I pride myself on doing quality work and maintain excellent communication. Most of the time i work with wordpress but some technologies i enjoy working with include <strong>ReactJS</strong>, <strong>JavaScript</strong> as well as PHP.</p> 
+     <a target="_blank" href="https://www.linkedin.com/in/angonsarker1/"><img src="./Images/Pranjol.jpg" alt="Pranjol Sarker Angon" height="200" /></a> 
+     
+     <!-- Download CV -->
+<div class="d-block d-sm-flex align-items-center"><a class="btn content-download button-main button-scheme" href="CV/Pranjol_Sarker_Angon.pdf" download="" role="button">Download CV</a>
+     <hr>
+    </section>
+   
+     <!-- Section: Skills and Expertise -->
 <section id="skills">
     <h2>Skills and Expertise:</h2>
     <ul>
@@ -50,6 +76,30 @@
         <li>MongoDB</li>
         <li>Git & GitHub</li>
     </ul>
+    
+    <h3>Skill Progress</h3>
+    <div>
+        
+        <label for="htmlprogress">HTML</label>
+        <progress id="htmlprogress" value="90" max="100">90%</progress>
+    </div>
+
+    <div>
+        <label for="cssprogress">CSS</label>
+        <progress id="cssprogress" value="85" max="100">85%</progress>
+    </div>
+
+    <div>
+        <label for="jsprogress">JavaScript</label>
+        <progress id="jsprogress" value="80" max="100">80%</progress>
+    </div>
+
+    <h3>Experience Level</h3>
+
+    <div>
+        <label for="experiencelevel">Experience:</label>
+        <meter id="experiencelevel" value="5" min="0" max="10">5 years</meter>
+    </div>
 </section>
 
 
@@ -80,14 +130,13 @@
             <tbody>
                 <tr>
                     <td>Master's</td>
-                    <td>AIUB</td>
+                    <td rowspan="2">AIUB</td>
                     <td>Telecommuinication Engineering</td>
                     <td>2</td>
                     <td>3.8</td>
                 </tr>
                 <tr>
                     <td>Undergraduate</td>
-                    <td>AIUB</td>
                     <td>EEE</td>
                     <td>4</td>
                     <td>3.14</td>
@@ -115,10 +164,11 @@
     <!-- Section: Contact Form -->
      <section id="contactform">
         <h2>Contact Form:</h2>
-        <form>
+        <form action="https://formspree.io/f/mldrlqvo"
+        method="POST">
            <div>
             <label for="name">Name: </label>
-            <input type="name" id="name" name="name" required />
+            <input type="text" id="name" name="name" required />
            </div>
 
           <div>
@@ -126,9 +176,23 @@
             <input type="email" id="email" name="email" required />
           </div>
 
+          <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="18" max="60"/>
+          </div>
+
+          <div>
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" required />
+          </div>
+
             <div>
                 <label for="subject">Subject: </label>
             <input type="subject" id="subject" name="subject" required />
+            </div>
+            <div>
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" required accept="image/*"/>
             </div>
 
             <div>
@@ -142,13 +206,26 @@
             </div>
         </form>
      </section>
+</main>
+   
 
 
-    <!-- Section: Footer -->
+    <!--Footer -->
      <footer id="contactme">
         <p>Copyright reserved by Angon2024</p>
         <a href="tel:01754712426">☏</a>
         <a href="mailto:angonpranjol58@gmail.com">📩</a>
+
+        <div>
+            <h2>Follow Me:</h2>
+    <a href="https://www.facebook.com/pranjol.sarker" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/angon_sarker/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/angonsarker1/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.5461857173586!2d90.40239657487614!3d24.74245564997032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37564f11fe9065b7%3A0xc55917ba1637ef9f!2sNayapara%20Rd%2C%20Mymensingh!5e0!3m2!1sen!2sbd!4v1723958267686!5m2!1sen!2sbd" title="Home address" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
      </footer>
 
 
@@ -157,3 +234,4 @@
     
 </body>
 </html>
+
